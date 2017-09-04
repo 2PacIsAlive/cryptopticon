@@ -9,6 +9,7 @@ from threading import Thread
 
 account_sid = environ["TWILIO_ACCOUNT_SID"]
 auth_token = environ["TWILIO_AUTH_TOKEN"] 
+client_number = environ["TWILIO_NUMBER"]
 client = Client(account_sid, auth_token)
 
 app = application = Flask("cryptopticon", static_url_path='')
@@ -89,7 +90,7 @@ class Alert(object):
 
 	def send_alert(self):
 		message = client.api.account.messages.create(to=self.number,
-                                             from_="+17206192946",
+                                             from_=client_number,
                                              body="ALERT: " + self.coin + " has dropped below " + self.value + "!")
 
 	def get_current_price(self):
