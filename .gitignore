@@ -1,0 +1,4 @@
+*.pyc
+__pycache__/
+env/
+app/static/node_modules/

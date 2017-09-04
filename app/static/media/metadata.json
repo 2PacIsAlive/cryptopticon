@@ -1,0 +1,100 @@
+[
+  {
+    "name": "bookstand",
+    "title": "an awesome bookstand yo",
+    "project": "booksnstuff",
+    "description": "i made this because i love books and i love reading and examples",
+    "contact_link": "/contact?project=bookstand",
+    "publish_date": "06/18/1994",
+    "images": [
+      {
+        "link": "/media/images/bookstand_0.png",
+        "thumblink": "/media/images/bookstand_0.png",
+        "id": "bookstand-image-0"
+      }, {
+        "link": "/media/images/bookstand_1.png",
+        "thumblink": "/media/images/bookstand_1.png",
+        "id": "bookstand-image-1"
+      }, {
+        "link": "/media/images/bookstand_2.png",
+        "thumblink": "/media/images/bookstand_2.png",
+        "id": "bookstand-image-2"
+      }
+    ],
+    "gallery": {
+      "id": "bookstand-gallery"
+    }
+  }, {
+    "name": "chair",
+    "title": "a cool chair i made",
+    "project": "chairsandthings",
+    "description": "i made this because i love chairs, why else would you make a chair",
+    "contact_link": "/contact?project=chair",
+    "publish_date": "05/13/1991",
+    "images": [
+      {
+        "link": "/media/images/chair_0.png",
+        "thumblink": "/media/images/chair_0.png",
+        "id": "chair-image-0"
+      }
+    ],
+    "gallery": {
+      "id": "chair-gallery"
+    }
+  }, {
+    "name": "light",
+    "title": "a cool light i made",
+    "project": "lightsandshelves",
+    "description": "i made this because i love chairs, why else would you make a light",
+    "contact_link": "/contact?project=light",
+    "publish_date": "05/13/4991",
+    "images": [
+      {
+        "link": "/media/images/light_0.png",
+        "thumblink": "/media/images/light_0.png",
+        "id": "light-image-0"
+      }
+    ],
+    "gallery": {
+      "id": "light-gallery"
+    }
+  }, {
+    "name": "shelf",
+    "title": "a cool shelf i made",
+    "project": "lightsandshelves",
+    "description": "i made this because i love shelves, why else would you make a shelf",
+    "contact_link": "/contact?project=shelf",
+    "publish_date": "05/13/499431",
+    "images": [
+      {
+        "link": "/media/images/shelf_0.png",
+        "thumblink": "/media/images/shelf_0.png",
+        "id": "shelf-image-0"
+      }, {
+        "link": "/media/images/shelf_1.png",
+        "thumblink": "/media/images/shelf_1.png",
+        "id": "shelf-image-1"
+      }
+    ],
+    "gallery": {
+      "id": "shelf-gallery"
+    }
+  }, {
+    "name": "table",
+    "title": "a cool table i made",
+    "project": "tables",
+    "description": "i made this because i love tables, why else would you make a table",
+    "contact_link": "/contact?project=table",
+    "publish_date": "02/22/2222",
+    "images": [
+      {
+        "link": "/media/images/table_0.png",
+        "thumblink": "/media/images/table_0.png",
+        "id": "table-image-0"
+      }
+    ],
+    "gallery": {
+      "id": "table-gallery"
+    }
+  }
+]

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/css/index.css">
+        <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+        <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+        <link href='/css/material-icons.css' rel="stylesheet">
+        <link href="/node_modules/vuetify/dist/vuetify.min.css" rel="stylesheet">
+        <title>cryptopticon</title>
+    </head>
+    <body>
+        <div id="app">
+            <v-app>
+                <v-toolbar fixed>
+                    <v-toolbar-title>
+                        <b>crypto</b><i>pticon</i>
+                    </v-toolbar-title>
+                    <v-spacer></v-spacer>
+                    <v-toolbar-items>
+                        <v-btn flat @click.native="logout()">logout</v-btn>
+                    </v-toolbar-items>
+                </v-toolbar>
+                <main>
+                    <v-alert success dismissible v-model="alertNewUserCreated">
+                        {% raw %}
+                        Successfully created a new cryptopticon account for {{ user.name }}! Have fun <i class="em em---1"></i>
+                        {% endraw %}
+                    </v-alert>
+                    <v-alert success dismissible v-model="alertNetworkLoaded">
+                        {% raw %}
+                        Successfully loaded alert! <i class="em em-grinning"></i>
+                        {% endraw %}
+                    </v-alert>
+                    <v-container fluid>
+                        <div v-if="screen === 'login'">
+                            <v-container>
+                                <v-card hover>
+                                    <v-card-media src="/media/images/background.jpg" height="200px">
+                                    </v-card-media>
+                                    <v-card-title primary-title>
+                                        <div>
+                                            <h3 class="headline mb-0">Log In</h3>
+                                            <div>
+                                                Welcome to cryptopticon. Please log in or sign up.
+                                            </div>
+                                        </div>
+                                    </v-card-title>
+                                    <v-card-text>
+                                        <v-text-field
+                                                name="email"
+                                                label="email"
+                                                id="email"
+                                                v-model="user.email"
+                                                :rules="[rules.required, rules.email]"
+                                        ></v-text-field>
+                                    </v-card-text>
+                                    <v-card-actions>
+                                        <v-btn flat primary @click.native="login()">Log In</v-btn>
+                                        <v-btn flat @click.native="changeScreen('signup')"class="orange--text">Sign Up</v-btn>
+                                    </v-card-actions>
+                                </v-card>
+                            </v-container>
+                        </div>
+                        <div v-else-if="screen === 'signup'">
+                            <v-container>
+                                <v-card hover>
+                                    <v-card-media src="/media/images/background.jpg" height="200px">
+                                    </v-card-media>
+                                    <v-card-title primary-title>
+                                        <div>
+                                            <h3 class="headline mb-0">Sign Up</h3>
+                                            <div>
+                                                Welcome to cryptopticon. Sign up below.
+                                            </div>
+                                        </div>
+                                    </v-card-title>
+                                    <v-card-text>
+                                        <v-text-field
+                                                name="username"
+                                                label="username"
+                                                id="username"
+                                                v-model="user.name"
+                                                :rules="[rules.required]"
+                                        ></v-text-field>
+                                        <v-text-field
+                                                name="number"
+                                                label="number"
+                                                id="number"
+                                                v-model="user.number"
+                                                :rules="[rules.required]"
+                                        ></v-text-field>
+                                    </v-card-text>
+                                    <v-card-actions>
+                                        <v-btn flat primary @click.native="signup()">Sign Up</v-btn>
+                                        <v-btn flat @click.native="changeScreen('login')"class="orange--text">Log In</v-btn>
+                                    </v-card-actions>
+                                </v-card>
+                            </v-container>
+						<div v-else-if="screen === 'alerts'">
+                            <v-container>
+								alerts                                
+                            </v-container>
+                        </div>
+                        <div v-else="screen === 'about'">
+                            about
+                        </div>
+                    </v-container>
+                </main>
+                <br/>
+                <br/>
+                <v-bottom-nav
+                        value="true"
+                        class="grey lighten-2">
+                    <v-btn @click.native="changeScreen('about')" :value="screen === 'about'">
+                        <span>about</span>
+                        <v-icon>build</v-icon>
+                    </v-btn>
+                    <v-btn @click.native="changeScreen('alerts')" :value="screen === 'alerts'">
+                        <span>alerts</span>
+                        <v-icon>build</v-icon>
+                    </v-btn>
+                </v-bottom-nav>
+            </v-app>
+        </div>
+    </body>
+    <script src="/node_modules/vue/dist/vue.link.js"></script>
+    <script src="/node_modules/vue-resource/dist/vue-resource.min.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+    <script src="/js/app.js"></script>
+</html>
